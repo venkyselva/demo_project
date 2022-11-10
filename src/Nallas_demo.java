@@ -28,7 +28,8 @@ public class Nallas_demo {
 	public static JLabel guess_status;
 	public static JLabel remaining_count;
 	public static String user_status ="Yet to start";
-	public static  int count=3;
+	public static  int count=5;
+	public static  int Guess_count=0;
 	public static JTextField userEnt;
 	public static int random_numner=0;
 	public static String user_guess;
@@ -95,7 +96,7 @@ public class Nallas_demo {
 				  System.out.println("guess"+user_guess);
 				  Boolean valid_data = check_input(user_guess);
 				  System.out.println("guess"+valid_data);
-				  
+				  Guess_count = Guess_count+1;
 				  if(user_guess.equalsIgnoreCase("")||user_guess.equalsIgnoreCase(null)||valid_data==false)
 				  { 
 					  user_status ="Invalid data";
@@ -126,17 +127,18 @@ public class Nallas_demo {
 					  }
 					  else
 					  {
+						  
 						  guess_status.setBackground(Color.GREEN);
 						  guess_status.setOpaque(true);
 						  subm.setEnabled(false);
 						  guess_satus = "Success";
-						  JOptionPane.showMessageDialog(null, "User guess Status :---" +guess_satus +"----","Thank you for your participation", JOptionPane.PLAIN_MESSAGE);
+						  JOptionPane.showMessageDialog(null, "User guess Status :---" +guess_satus +"----"+"Guess Attemt: "+ Guess_count,"Thank you for your participation", JOptionPane.PLAIN_MESSAGE);
 						  System.exit(1);
 					  }
 				  }
 				  if(count==0)
 				  {
-					  JOptionPane.showMessageDialog(null,"User guess Status:---"  +guess_satus+"----","Thank you for your participation", JOptionPane.PLAIN_MESSAGE);
+					  JOptionPane.showMessageDialog(null,"User guess Status:---"  +guess_satus+"----"+"Guess Attemt: "+ Guess_count,"Thank you for your participation", JOptionPane.PLAIN_MESSAGE);
 					  subm.setEnabled(false);
 					  System.exit(1);
 				  }
