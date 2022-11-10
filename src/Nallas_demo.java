@@ -28,7 +28,7 @@ public class Nallas_demo {
 	public static JLabel guess_status;
 	public static JLabel remaining_count;
 	public static String user_status ="Yet to start";
-	public static  int count=5;
+	public static  int count=3;
 	public static JTextField userEnt;
 	public static int random_numner=0;
 	public static String user_guess;
@@ -133,8 +133,6 @@ public class Nallas_demo {
 						  JOptionPane.showMessageDialog(null, "User guess Status :---" +guess_satus +"----","Thank you for your participation", JOptionPane.PLAIN_MESSAGE);
 						  System.exit(1);
 					  }
-					  
-					 
 				  }
 				  if(count==0)
 				  {
@@ -142,7 +140,6 @@ public class Nallas_demo {
 					  subm.setEnabled(false);
 					  System.exit(1);
 				  }
-				 
 		}
 		}); 
 	}
